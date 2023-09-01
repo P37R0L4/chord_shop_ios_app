@@ -26,7 +26,7 @@ struct EmailSignUpFormView: View {
                 .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
             
             Text("token_label_comment")
-                .foregroundColor(.secondary)
+                .foregroundStyle(.background)
                 .font(.system(size: 14))
                 .padding(3)
             

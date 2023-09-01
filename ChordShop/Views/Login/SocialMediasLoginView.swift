@@ -15,10 +15,10 @@ struct SocialMediasLoginView: View {
                 // MARK: Apple login Button
                 Button {} label: {
                     Image(systemName: "apple.logo")
-                        .foregroundColor(.white)
+                        .foregroundStyle(.background)
                 }
                 .frame(width: 60, height: 60)
-                .background(.black)
+                .background(.foreground)
                 .cornerRadius(50)
                 
                 // MARK: Google Login Button

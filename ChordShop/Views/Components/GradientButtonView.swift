@@ -19,7 +19,7 @@ struct GradientButtonView: View {
             Text(LocalizedStringKey(title))
                 .frame(maxWidth: .infinity)
                 .padding(20)
-                .foregroundColor(.white)
+                .foregroundStyle(.background)
                 .textCase(.uppercase)
         }
         .background(
