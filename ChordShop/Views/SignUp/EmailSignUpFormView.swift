@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmailSignUpFormView: View {
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var checked = false

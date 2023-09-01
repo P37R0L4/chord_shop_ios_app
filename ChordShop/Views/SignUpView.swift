@@ -14,10 +14,9 @@ extension URL: Identifiable {
 }
 
 struct SignUpView: View {
-    // When set it will present Safari
+    
     @State var presentURL: URL?
 
-    
     var body: some View {
         NavigationStack {
             Divider()
