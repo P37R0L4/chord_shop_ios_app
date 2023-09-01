@@ -41,6 +41,14 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
+        // MARK: Languages Preview
         SignUpView()
+            .environment(\.locale, .init(identifier: "pt"))
+        
+        SignUpView()
+            .environment(\.locale, .init(identifier: "en"))
+        
+        // MARK: Dark preview
+        SignUpView().preferredColorScheme(.dark)
     }
 }

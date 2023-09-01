@@ -19,3 +19,5 @@
 "sign_up" = "Cadastre-se";
 "terms_and_conditions" = "termos e condições";
 "accept_terms_and_conditions" = "Aceito os termos e condições";
+"token_field_label" = "Chave de identificação do aluno";
+"token_label_comment" = "Utilize a chave fornecida pela sua escola";

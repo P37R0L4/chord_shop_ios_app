@@ -19,3 +19,5 @@
 "sign_up" = "Sign Up";
 "terms_and_conditions" = "terms and conditions";
 "accept_terms_and_conditions" = "Accept terms and conditions";
+"token_field_label" = "Student ID Key";
+"token_label_comment" = "Use the key provided by your school";

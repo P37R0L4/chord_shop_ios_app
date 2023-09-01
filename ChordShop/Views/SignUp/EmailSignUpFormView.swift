@@ -17,9 +17,18 @@ struct EmailSignUpFormView: View {
         VStack(alignment: .leading) {
             TextField("email_tf", text: $email)
                 .textFieldStyle(GradientTextFieldBackground(systemImageString: "person"))
+                .keyboardType(.emailAddress)
             
             SecureField("password_tf", text: $password)
                 .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
+            
+            TextField("token_field_label", text: $password)
+                .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
+            
+            Text("token_label_comment")
+                .foregroundColor(.secondary)
+                .font(.system(size: 14))
+                .padding(3)
             
             // Checkbox View
             HStack {
