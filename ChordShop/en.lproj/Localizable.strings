@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  ChordShop
+
+  Created by Lucas Petrola on 31/08/23.
+  
+*/
+
+// Mark: Navigation titles
+"login_title_label" = "Sign In";
+
+// Mark: Input labels login page
+"email_tf" = "Enter with your email";
+"password_tf" = "Enter with your password";
+"button_label" = "Enter";
+"forggot_password" = "Forggot your password?";
+"or_sign_up_with" = "or enter with";
+"dont_have_account_yet" = "don't have a account yet?";
+"sign_up" = "Sign Up";
+"terms_and_conditions" = "terms and conditions";
+"accept_terms_and_conditions" = "Accept terms and conditions";
