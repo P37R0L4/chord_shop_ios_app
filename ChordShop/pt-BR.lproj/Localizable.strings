@@ -26,6 +26,7 @@
 "key_is_not_valid" = "Sua chave não é válida. Entre em contato com sua escola para geração de uma chave.";
 "close" = "Fechar";
 "alert" = "Aviso";
+"error" = "Erro";
 "user_created" = "Usuário criado";
 "you_can_sign_in_now" = "Foi encaminhado um email de verificação. Para confirmar, acesse sua caixa de email ou Span";
 "return_to_login" = "Retornar ao login";
@@ -34,3 +35,4 @@
 "email_recuperation_description" = "Digite seu email cadastrado que nós iremos lhe mandar um email de recuperação.";
 "email_alert_recuperation_message" = "Será enviado um email com as instruções de recuperação.";
 "may_you_continue" = "Deseja continuar?";
+"invalid_email" = "Formato de email inválido";

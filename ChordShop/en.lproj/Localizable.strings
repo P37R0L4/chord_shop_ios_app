@@ -26,6 +26,7 @@
 "key_is_not_valid" = "Your key is not valid. Contact your school to generate a key.";
 "close" = "Close";
 "alert" = "Warning";
+"error" = "Error";
 "user_created" = "User created";
 "you_can_sign_in_now" = "We send a verification email. Confirm your mail box or span";
 "return_to_login" = "Return to login";
@@ -34,3 +35,4 @@
 "email_recuperation_description" = "Type your email, will be sended a recovery mail.";
 "email_alert_recuperation_message" = "Will be sended a email with recovery instructions.";
 "may_you_continue" = "may you continue?";
+"invalid_email" = "Invalid email format";

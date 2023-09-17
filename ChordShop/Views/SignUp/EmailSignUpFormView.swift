@@ -20,6 +20,7 @@ struct EmailSignUpFormView: View {
     // MARK: Presentations
     @State private var warningPresent: Bool = false
     @State private var successPresent: Bool = false
+    @State private var invalidFieldPresent: Bool = false
     
     let validators = Validators()
     
@@ -59,6 +60,8 @@ struct EmailSignUpFormView: View {
                         authController.sendEmailVerification {
                             successPresent = true
                         }
+                    } isError: {
+                        invalidFieldPresent = true
                     }
                 } isError: {
                     warningPresent = true
@@ -75,6 +78,12 @@ struct EmailSignUpFormView: View {
             Button("close", role: .cancel) {}
         } message: {
             Text("key_is_not_valid")
+        }
+        // Invalid email
+        .alert("error", isPresented: $invalidFieldPresent) {
+            Button("close", role: .cancel) {}
+        } message: {
+            Text("invalid_email")
         }
         // User SignUp
         .alert("user_created", isPresented: $successPresent) {

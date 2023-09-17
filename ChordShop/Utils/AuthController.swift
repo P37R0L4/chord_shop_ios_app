@@ -39,9 +39,16 @@ class AuthController {
         }
     }
     
-    public func signUp (_ completion: @escaping () -> Void) {
+    public func signUp (_ completion: @escaping () -> Void, isError: @escaping () -> Void) {
         guard let token = self.token else {return}
         guard let password = self.password else {return}
+        
+        let isValidEmail = Validators().isValidEmail(self.email)
+        
+        guard isValidEmail else {
+            isError()
+            return
+        }
         
         let db = Firestore.firestore()
         let docRef = db.collection("student_keys").document(token)
@@ -59,6 +66,10 @@ class AuthController {
             }
             
         }
+    }
+    
+    public func signIn (_ completion: @escaping () -> Void) {
+        
     }
     
     public func sendEmailVerification (_ completion: @escaping () -> Void) {
