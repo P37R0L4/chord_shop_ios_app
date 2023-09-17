@@ -16,14 +16,18 @@ struct EmailLoginView: View {
         VStack(alignment: .leading) {
             TextField("email_tf", text: $email)
                 .textFieldStyle(GradientTextFieldBackground(systemImageString: "person"))
+                .textInputAutocapitalization(.never)
             
             SecureField("password_tf", text: $password)
                 .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
+                .textInputAutocapitalization(.never)
             
-            Button {} label: {
+            NavigationLink {
+                ForgetPasswordView()
+            } label: {
                 Text("forggot_password")
+                    .frame(alignment: .leading)
             }
-            .frame(alignment: .leading)
             
             GradientButtonView(completion: {
                 

@@ -16,7 +16,8 @@ extension URL: Identifiable {
 struct SignUpView: View {
     
     @State var presentURL: URL?
-
+    var socialMedia: Int?
+    
     var body: some View {
         NavigationStack {
             Divider()
@@ -24,14 +25,14 @@ struct SignUpView: View {
             VStack {
                 EmailSignUpFormView()
                 Spacer()
-                
+
                 // MARK: Safari Terms
                 Button("terms_and_conditions") {
                     presentURL = URL(string: "https://google.com")!
-                    }
-                    .sheet(item: $presentURL) { url in
-                            SafariView(url: url)
-                    }
+                }
+                .sheet(item: $presentURL) { url in
+                    SafariView(url: url)
+                }
             }
             .padding()
             .navigationTitle("sign_up")
@@ -41,6 +42,14 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
+        // MARK: Languages Preview
         SignUpView()
+            .environment(\.locale, .init(identifier: "pt"))
+        
+        SignUpView()
+            .environment(\.locale, .init(identifier: "en"))
+        
+        // MARK: Dark preview
+        SignUpView().preferredColorScheme(.dark)
     }
 }

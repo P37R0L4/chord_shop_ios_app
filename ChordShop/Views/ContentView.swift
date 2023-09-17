@@ -14,7 +14,6 @@ struct ContentView: View {
             
             VStack {
                 EmailLoginView()
-                SocialMediasLoginView()
                 Spacer()
                 
                 HStack {
@@ -23,7 +22,7 @@ struct ContentView: View {
                         SignUpView()
                     }
                 }
-                .font(.system(size: 14))
+                .font(.system(size: 12))
             }
             .padding()
             .navigationTitle("login_title_label")
@@ -33,6 +32,14 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        // MARK: Languages Preview
         ContentView()
+            .environment(\.locale, .init(identifier: "pt"))
+        
+        ContentView()
+            .environment(\.locale, .init(identifier: "en"))
+        
+        // MARK: Dark preview
+        ContentView().preferredColorScheme(.dark)
     }
 }
