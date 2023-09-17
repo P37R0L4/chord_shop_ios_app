@@ -12,6 +12,9 @@ struct EmailLoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    // Alert states
+    @State private var loginErrorPresent: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             TextField("email_tf", text: $email)
@@ -30,8 +33,20 @@ struct EmailLoginView: View {
             }
             
             GradientButtonView(completion: {
+                let authController = AuthController(email: email, password: password)
                 
+                authController.signIn {
+                    
+                } isError: {
+                    loginErrorPresent = true
+                }
+
             }, title: "button_label")
+        }
+        .alert("error", isPresented: $loginErrorPresent) {
+            Button("close", role: .cancel) {}
+        } message: {
+            Text("login_error_message")
         }
     }
 }

@@ -75,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				DB8E3F8A2AB50578005AFDE1 /* Validators.swift */,
-				DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -94,6 +93,14 @@
 				DBA229912AA1B49E00D69575 /* EmailSignUpFormView.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DBA344D42AB7918B00EB3627 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DBF6DFCC2AA17F7D006548E7 = {
@@ -115,6 +122,7 @@
 		DBF6DFD72AA17F7D006548E7 /* ChordShop */ = {
 			isa = PBXGroup;
 			children = (
+				DBA344D42AB7918B00EB3627 /* Controllers */,
 				DBF6DFDE2AA17F7E006548E7 /* Preview Content */,
 				DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */,
 				DB8E3F892AB5053B005AFDE1 /* Utils */,
@@ -139,7 +147,7 @@
 			children = (
 				DB8E3F922AB54C5F005AFDE1 /* ForgetPassword */,
 				DBA229902AA1B48D00D69575 /* SignUp */,
-				DBF6DFF62AA19688006548E7 /* Login */,
+				DBF6DFF62AA19688006548E7 /* SignIn */,
 				DBF6DFF12AA18EAC006548E7 /* Components */,
 				DBF6DFEE2AA18D0D006548E7 /* ViewHelpers */,
 				DBA2298E2AA1B28D00D69575 /* SignUpView.swift */,
@@ -167,12 +175,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		DBF6DFF62AA19688006548E7 /* Login */ = {
+		DBF6DFF62AA19688006548E7 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
 				DBF6DFF72AA196B3006548E7 /* EmailLoginView.swift */,
 			);
-			path = Login;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

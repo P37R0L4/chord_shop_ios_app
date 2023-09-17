@@ -36,3 +36,4 @@
 "email_alert_recuperation_message" = "Será enviado um email com as instruções de recuperação.";
 "may_you_continue" = "Deseja continuar?";
 "invalid_email" = "Formato de email inválido";
+"login_error_message" = "Erro ao logar! Verifique seu email/senha.";

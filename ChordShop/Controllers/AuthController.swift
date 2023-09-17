@@ -68,8 +68,26 @@ class AuthController {
         }
     }
     
-    public func signIn (_ completion: @escaping () -> Void) {
+    public func signIn (_ completion: @escaping () -> Void, isError: @escaping () -> Void) {
+        guard let email = self.email else {return}
+        guard let password = self.password else {return}
         
+        let isValidEmail = Validators().isValidEmail(self.email)
+        
+        guard isValidEmail else {
+            isError()
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                isError()
+            } else {
+                completion()
+                print("Success login!")
+            }
+        }
     }
     
     public func sendEmailVerification (_ completion: @escaping () -> Void) {
