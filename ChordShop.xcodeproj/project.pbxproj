@@ -13,7 +13,11 @@
 		DB1C62372AA240CD00B9CE37 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB1C62362AA240CD00B9CE37 /* FirebaseFirestoreSwift */; };
 		DB1C62392AA240CD00B9CE37 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = DB1C62382AA240CD00B9CE37 /* FirebaseFunctions */; };
 		DB1C623B2AA240CD00B9CE37 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB1C623A2AA240CD00B9CE37 /* FirebaseStorage */; };
-		DB1C623D2AA240EE00B9CE37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB1C623C2AA240EE00B9CE37 /* GoogleService-Info.plist */; };
+		DB27F8EE2AAAD3A5004D8EE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */; };
+		DB8E3F8B2AB50578005AFDE1 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F8A2AB50578005AFDE1 /* Validators.swift */; };
+		DB8E3F8D2AB5142D005AFDE1 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */; };
+		DB8E3F912AB54B13005AFDE1 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */; };
+		DB8E3F942AB54C8C005AFDE1 /* ForgetPasswordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F932AB54C8C005AFDE1 /* ForgetPasswordFormView.swift */; };
 		DBA2298F2AA1B28D00D69575 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2298E2AA1B28D00D69575 /* SignUpView.swift */; };
 		DBA229922AA1B49E00D69575 /* EmailSignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA229912AA1B49E00D69575 /* EmailSignUpFormView.swift */; };
 		DBA229962AA1B6BE00D69575 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA229952AA1B6BE00D69575 /* SafariView.swift */; };
@@ -26,11 +30,14 @@
 		DBF6DFF02AA18D2F006548E7 /* GradientTextFieldBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFEF2AA18D2F006548E7 /* GradientTextFieldBackground.swift */; };
 		DBF6DFF52AA18F32006548E7 /* GradientButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFF42AA18F32006548E7 /* GradientButtonView.swift */; };
 		DBF6DFF82AA196B3006548E7 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFF72AA196B3006548E7 /* EmailLoginView.swift */; };
-		DBF6DFFB2AA196F8006548E7 /* SocialMediasLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFFA2AA196F8006548E7 /* SocialMediasLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB1C623C2AA240EE00B9CE37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB8E3F8A2AB50578005AFDE1 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		DB8E3F932AB54C8C005AFDE1 /* ForgetPasswordFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordFormView.swift; sourceTree = "<group>"; };
 		DBA2298E2AA1B28D00D69575 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DBA229912AA1B49E00D69575 /* EmailSignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpFormView.swift; sourceTree = "<group>"; };
 		DBA229952AA1B6BE00D69575 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
@@ -45,7 +52,6 @@
 		DBF6DFEF2AA18D2F006548E7 /* GradientTextFieldBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextFieldBackground.swift; sourceTree = "<group>"; };
 		DBF6DFF42AA18F32006548E7 /* GradientButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonView.swift; sourceTree = "<group>"; };
 		DBF6DFF72AA196B3006548E7 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
-		DBF6DFFA2AA196F8006548E7 /* SocialMediasLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediasLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB8E3F892AB5053B005AFDE1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E3F8A2AB50578005AFDE1 /* Validators.swift */,
+				DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB8E3F922AB54C5F005AFDE1 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E3F932AB54C8C005AFDE1 /* ForgetPasswordFormView.swift */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
 		DBA229902AA1B48D00D69575 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +115,12 @@
 		DBF6DFD72AA17F7D006548E7 /* ChordShop */ = {
 			isa = PBXGroup;
 			children = (
-				DB1C623C2AA240EE00B9CE37 /* GoogleService-Info.plist */,
+				DBF6DFDE2AA17F7E006548E7 /* Preview Content */,
+				DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */,
+				DB8E3F892AB5053B005AFDE1 /* Utils */,
 				DBF6DFE62AA1882C006548E7 /* Views */,
 				DBF6DFD82AA17F7D006548E7 /* ChordShopApp.swift */,
 				DBF6DFDC2AA17F7E006548E7 /* Assets.xcassets */,
-				DBF6DFDE2AA17F7E006548E7 /* Preview Content */,
 				DBF6DFEC2AA18956006548E7 /* Localizable.strings */,
 			);
 			path = ChordShop;
@@ -113,12 +137,14 @@
 		DBF6DFE62AA1882C006548E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB8E3F922AB54C5F005AFDE1 /* ForgetPassword */,
 				DBA229902AA1B48D00D69575 /* SignUp */,
 				DBF6DFF62AA19688006548E7 /* Login */,
 				DBF6DFF12AA18EAC006548E7 /* Components */,
 				DBF6DFEE2AA18D0D006548E7 /* ViewHelpers */,
 				DBA2298E2AA1B28D00D69575 /* SignUpView.swift */,
 				DBF6DFDA2AA17F7D006548E7 /* ContentView.swift */,
+				DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				DBF6DFF72AA196B3006548E7 /* EmailLoginView.swift */,
-				DBF6DFFA2AA196F8006548E7 /* SocialMediasLoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -221,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF6DFE02AA17F7E006548E7 /* Preview Assets.xcassets in Resources */,
-				DB1C623D2AA240EE00B9CE37 /* GoogleService-Info.plist in Resources */,
+				DB27F8EE2AAAD3A5004D8EE1 /* GoogleService-Info.plist in Resources */,
 				DBF6DFEA2AA18956006548E7 /* Localizable.strings in Resources */,
 				DBF6DFDD2AA17F7E006548E7 /* Assets.xcassets in Resources */,
 			);
@@ -234,14 +259,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF6DFFB2AA196F8006548E7 /* SocialMediasLoginView.swift in Sources */,
+				DB8E3F8D2AB5142D005AFDE1 /* AuthController.swift in Sources */,
 				DBA229962AA1B6BE00D69575 /* SafariView.swift in Sources */,
 				DBF6DFDB2AA17F7D006548E7 /* ContentView.swift in Sources */,
 				DBA229982AA1BA1800D69575 /* CheckboxView.swift in Sources */,
+				DB8E3F912AB54B13005AFDE1 /* ForgetPasswordView.swift in Sources */,
+				DB8E3F8B2AB50578005AFDE1 /* Validators.swift in Sources */,
 				DBF6DFF52AA18F32006548E7 /* GradientButtonView.swift in Sources */,
 				DBA2298F2AA1B28D00D69575 /* SignUpView.swift in Sources */,
 				DBF6DFD92AA17F7D006548E7 /* ChordShopApp.swift in Sources */,
 				DBF6DFF02AA18D2F006548E7 /* GradientTextFieldBackground.swift in Sources */,
+				DB8E3F942AB54C8C005AFDE1 /* ForgetPasswordFormView.swift in Sources */,
 				DBF6DFF82AA196B3006548E7 /* EmailLoginView.swift in Sources */,
 				DBA229922AA1B49E00D69575 /* EmailSignUpFormView.swift in Sources */,
 			);

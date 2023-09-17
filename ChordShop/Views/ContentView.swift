@@ -14,7 +14,6 @@ struct ContentView: View {
             
             VStack {
                 EmailLoginView()
-                SocialMediasLoginView()
                 Spacer()
                 
                 HStack {
@@ -23,7 +22,7 @@ struct ContentView: View {
                         SignUpView()
                     }
                 }
-                .font(.system(size: 14))
+                .font(.system(size: 12))
             }
             .padding()
             .navigationTitle("login_title_label")

@@ -11,6 +11,7 @@ struct GradientButtonView: View {
     
     var completion: () -> Void
     var title: String
+    var isDisabled: Bool = false
     
     var body: some View {
         Button {
@@ -34,6 +35,8 @@ struct GradientButtonView: View {
         )
         .cornerRadius(8)
         .padding(.vertical, 10)
+        .disabled(isDisabled)
+        .opacity(isDisabled ? 0.5 : 1)
     }
 }
 

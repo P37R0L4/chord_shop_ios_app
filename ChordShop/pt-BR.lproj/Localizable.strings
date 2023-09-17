@@ -8,16 +8,29 @@
 
 // Mark: Navigation titles
 "login_title_label" = "Login";
+"sign_up" = "Cadastre-se";
+"forgget_password_title" = "Recuperar senha";
 
 // Mark: Input labels login page
 "email_tf" = "Digite seu email";
 "password_tf" = "Digite sua senha";
+"recuperation_email" = "Email de recuperação";
 "button_label" = "Entrar";
 "forggot_password" = "Esqueceu sua senha?";
 "or_sign_up_with" = "ou entre com";
 "dont_have_account_yet" = "Ainda não tem uma conta?";
-"sign_up" = "Cadastre-se";
 "terms_and_conditions" = "termos e condições";
 "accept_terms_and_conditions" = "Aceito os termos e condições";
 "token_field_label" = "Chave de identificação do aluno";
 "token_label_comment" = "Utilize a chave fornecida pela sua escola";
+"key_is_not_valid" = "Sua chave não é válida. Entre em contato com sua escola para geração de uma chave.";
+"close" = "Fechar";
+"alert" = "Aviso";
+"user_created" = "Usuário criado";
+"you_can_sign_in_now" = "Foi encaminhado um email de verificação. Para confirmar, acesse sua caixa de email ou Span";
+"return_to_login" = "Retornar ao login";
+"email_invalid" = "Email não valido";
+"send_recuperation_button_title" = "Enviar email de recuperação";
+"email_recuperation_description" = "Digite seu email cadastrado que nós iremos lhe mandar um email de recuperação.";
+"email_alert_recuperation_message" = "Será enviado um email com as instruções de recuperação.";
+"may_you_continue" = "Deseja continuar?";

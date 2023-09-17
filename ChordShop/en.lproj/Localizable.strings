@@ -8,16 +8,29 @@
 
 // Mark: Navigation titles
 "login_title_label" = "Sign In";
+"sign_up" = "Sign Up";
+"forgget_password_title" = "Recuperar senha";
 
 // Mark: Input labels login page
 "email_tf" = "Enter with your email";
+"recuperation_email" = "Recuperation email";
 "password_tf" = "Enter with your password";
 "button_label" = "Enter";
 "forggot_password" = "Forggot your password?";
 "or_sign_up_with" = "or enter with";
 "dont_have_account_yet" = "don't have a account yet?";
-"sign_up" = "Sign Up";
 "terms_and_conditions" = "terms and conditions";
 "accept_terms_and_conditions" = "Accept terms and conditions";
 "token_field_label" = "Student ID Key";
 "token_label_comment" = "Use the key provided by your school";
+"key_is_not_valid" = "Your key is not valid. Contact your school to generate a key.";
+"close" = "Close";
+"alert" = "Warning";
+"user_created" = "User created";
+"you_can_sign_in_now" = "We send a verification email. Confirm your mail box or span";
+"return_to_login" = "Return to login";
+"email_invalid" = "Invalid email";
+"send_recuperation_button_title" = "Send recuperation email";
+"email_recuperation_description" = "Type your email, will be sended a recovery mail.";
+"email_alert_recuperation_message" = "Will be sended a email with recovery instructions.";
+"may_you_continue" = "may you continue?";

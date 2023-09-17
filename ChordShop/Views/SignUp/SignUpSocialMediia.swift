@@ -1,21 +1,17 @@
 //
-//  EmalSignUpFormView.swift
+//  SignUpSocialMediia.swift
 //  ChordShop
 //
-//  Created by Lucas Petrola on 01/09/23.
+//  Created by Lucas Petrola on 15/09/23.
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAuth
 
-struct EmailSignUpFormView: View {
+struct SignUpSocialMediia: View {
     
     // MARK: Field values
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var token: String = ""
     @State private var checked: Bool = false
+    @State private var token: String = ""
     
     // MARK: Presentations
     @State private var warningPresent: Bool = false
@@ -23,25 +19,12 @@ struct EmailSignUpFormView: View {
     
     let validators = Validators()
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("email_tf", text: $email)
-                .textFieldStyle(GradientTextFieldBackground(systemImageString: "person"))
-                .keyboardType(.emailAddress)
-                .textContentType(.emailAddress)
-                .textInputAutocapitalization(.never)
-            
-            SecureField("password_tf", text: $password)
-                .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
-            
-            TextField("token_field_label", text: $token)
-                .textFieldStyle(GradientTextFieldBackground(systemImageString: "key"))
-            
             Text("token_label_comment")
                 .foregroundStyle(.background)
                 .font(.system(size: 14))
+                .padding(3)
             
             // Checkbox View
             HStack {
@@ -50,25 +33,29 @@ struct EmailSignUpFormView: View {
             }
             
             GradientButtonView(completion: {
-                let authController = AuthController(email: email, password: password, token: token)
+                let authController = AuthController(token: token)
                 
                 authController.checkStudentKey {
                     authController.signUp {
-                        let authController = AuthController(email: email)
-                        
-                        authController.sendEmailVerification {
-                            successPresent = true
-                        }
+                        successPresent = true
                     }
                 } isError: {
                     warningPresent = true
                 }
                 
-            }, title: "sign_up", isDisabled: validators.isDisabled(
+            }, title: "sign_up")
+            .disabled(validators.isDisabledSocialMedia(
                 token: token,
-                email: email,
-                password: password,
-                checked: checked))
+                checked: checked)
+            )
+            .opacity(
+                validators.isDisabledSocialMedia(
+                    token: token,
+                    checked: checked)
+                ? 0.5
+                : 1
+            )
+            
         }
         // Invalid key
         .alert("alert", isPresented: $warningPresent) {
@@ -88,8 +75,8 @@ struct EmailSignUpFormView: View {
     }
 }
 
-struct EmailSignUpFormView_Previews: PreviewProvider {
+struct SignUpSocialMediia_Previews: PreviewProvider {
     static var previews: some View {
-        EmailSignUpFormView()
+        SignUpSocialMediia()
     }
 }
