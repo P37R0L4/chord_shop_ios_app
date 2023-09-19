@@ -8,16 +8,17 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import LocalAuthentication
 
 class AuthController {
     
-    private let email: String!
+    private let email: String?
     private let password: String?
     private let token: String?
     
     private let db = Firestore.firestore()
     
-    init(email: String!, password: String? = nil, token: String? = nil) {
+    init(email: String? = nil, password: String? = nil, token: String? = nil) {
         self.email = email
         self.password = password
         self.token = token
@@ -43,15 +44,16 @@ class AuthController {
     public func signUp (_ completion: @escaping () -> Void, isError: @escaping () -> Void) {
         guard let token = self.token else {return}
         guard let password = self.password else {return}
+        guard let email = self.email else {return}
         
-        let isValidEmail = Validators().isValidEmail(self.email)
+        let isValidEmail = Validators().isValidEmail(email)
         
         guard isValidEmail else {
             isError()
             return
         }
         
-        Auth.auth().createUser(withEmail: self.email, password: password) {result, error in
+        Auth.auth().createUser(withEmail: email, password: password) {result, error in
             guard error == nil else {return}
             
             self.updateUserDataFromDBStore(token: token) {
@@ -79,7 +81,7 @@ class AuthController {
         guard let email = self.email else {return}
         guard let password = self.password else {return}
         
-        let isValidEmail = Validators().isValidEmail(self.email)
+        let isValidEmail = Validators().isValidEmail(email)
         guard isValidEmail else {
             isError()
             return
@@ -95,7 +97,7 @@ class AuthController {
                 isVerifiedEmailError()
                 return
             }
-                        
+            
             completion()
         }
     }
@@ -111,6 +113,8 @@ class AuthController {
     }
     
     public func recoverEmail (_ completion: @escaping () -> Void, isError: @escaping () -> Void?) {
+        guard let email = self.email else {return}
+        
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if error != nil {
                 isError()
@@ -118,6 +122,33 @@ class AuthController {
             }
             
             completion()
+        }
+    }
+    
+    public func handleUserLogged (_ completion: @escaping () -> Void) {
+        let user = Auth.auth().currentUser
+        
+        if (user != nil) {
+            BiometryAuthentication {
+                completion()
+            }
+        }
+    }
+    
+    public func BiometryAuthentication(_ completion: @escaping () -> Void) {
+        let context = LAContext()
+        var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "login_biometrics_reason"
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                if success {
+                    completion()
+                }
+            }
         }
     }
 }

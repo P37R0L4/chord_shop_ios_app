@@ -10,5 +10,4 @@ import Foundation
 struct Session {
     var uid: String
     var email: String
-    var password: String
 }

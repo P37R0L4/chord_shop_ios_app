@@ -29,6 +29,7 @@
 "email_not_verified_error" = "Email não verificado";
 "email_not_verified_message" = "Sua conta não foi ativada. Nós mandamos um link para o email cadastrado.";
 "login_error_message" = "Verifique seu email/senha.";
+"login_biometrics_reason" = "Entrar com biometria";
 
 // MARK: SignUp page
 "terms_and_conditions" = "termos e condições";

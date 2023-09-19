@@ -29,6 +29,7 @@
 "email_not_verified_error" = "Email is not verified";
 "email_not_verified_message" = "You have not activate your account yet. We sent a email with the link to activate";
 "login_error_message" = "Verify your email/password.";
+"login_biometrics_reason" = "Sign In with biometrics";
 
 // MARK: SignUp page
 "terms_and_conditions" = "terms and conditions";

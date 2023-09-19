@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var pushToHome: Bool = false
+    
+    let authController = AuthController()
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -24,6 +29,14 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("login_title_label")
+            .onAppear {
+                authController.handleUserLogged {
+                    pushToHome = true
+                }
+            }
+            
+            // MARK: Navigations Widgets
+            NavigationLink(destination: HomePageView(), isActive: $pushToHome) { EmptyView() }
         }
     }
 }
