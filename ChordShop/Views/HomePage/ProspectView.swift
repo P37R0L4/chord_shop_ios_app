@@ -17,8 +17,8 @@ struct ProspectView: View {
     var body: some View {
         NavigationView {
             Text("Hee: 8==D")
-                .navigationTitle(title)
-        }        
+                .navigationTitle(NSLocalizedString(title, comment: ""))
+        }
     }
     
     var title: String {

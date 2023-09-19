@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignInView: View {
+    
+    @State private var pushToHome: Bool = false
+    
+    let authController = AuthController()
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -24,20 +29,28 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("login_title_label")
+            .onAppear {
+                authController.handleUserLogged {
+                    pushToHome = true
+                }
+            }
+            
+            // MARK: Navigations Widgets
+            NavigationLink(destination: HomePageView(), isActive: $pushToHome) { EmptyView() }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         // MARK: Languages Preview
-        ContentView()
+        SignInView()
             .environment(\.locale, .init(identifier: "pt"))
         
-        ContentView()
+        SignInView()
             .environment(\.locale, .init(identifier: "en"))
         
         // MARK: Dark preview
-        ContentView().preferredColorScheme(.dark)
+        SignInView().preferredColorScheme(.dark)
     }
 }
