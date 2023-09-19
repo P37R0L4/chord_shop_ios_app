@@ -14,6 +14,10 @@
 		DB1C62392AA240CD00B9CE37 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = DB1C62382AA240CD00B9CE37 /* FirebaseFunctions */; };
 		DB1C623B2AA240CD00B9CE37 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB1C623A2AA240CD00B9CE37 /* FirebaseStorage */; };
 		DB27F8EE2AAAD3A5004D8EE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */; };
+		DB295E2D2AB9551900FE03E1 /* ProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB295E2C2AB9551900FE03E1 /* ProspectView.swift */; };
+		DB295E382AB960F500FE03E1 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB295E372AB960F500FE03E1 /* SessionController.swift */; };
+		DB295E3A2AB9610300FE03E1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB295E392AB9610300FE03E1 /* Session.swift */; };
+		DB6005FD2AB93A9200D4236A /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6005FC2AB93A9200D4236A /* HomePageView.swift */; };
 		DB8E3F8B2AB50578005AFDE1 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F8A2AB50578005AFDE1 /* Validators.swift */; };
 		DB8E3F8D2AB5142D005AFDE1 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */; };
 		DB8E3F912AB54B13005AFDE1 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */; };
@@ -34,6 +38,10 @@
 
 /* Begin PBXFileReference section */
 		DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB295E2C2AB9551900FE03E1 /* ProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectView.swift; sourceTree = "<group>"; };
+		DB295E372AB960F500FE03E1 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		DB295E392AB9610300FE03E1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DB6005FC2AB93A9200D4236A /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		DB8E3F8A2AB50578005AFDE1 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
@@ -71,11 +79,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB295E302AB95B7100FE03E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB295E392AB9610300FE03E1 /* Session.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB6005FE2AB93EE300D4236A /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				DB295E2C2AB9551900FE03E1 /* ProspectView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		DB8E3F892AB5053B005AFDE1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				DB8E3F8A2AB50578005AFDE1 /* Validators.swift */,
-				DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -94,6 +117,15 @@
 				DBA229912AA1B49E00D69575 /* EmailSignUpFormView.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DBA344D42AB7918B00EB3627 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E3F8C2AB5142D005AFDE1 /* AuthController.swift */,
+				DB295E372AB960F500FE03E1 /* SessionController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DBF6DFCC2AA17F7D006548E7 = {
@@ -115,6 +147,8 @@
 		DBF6DFD72AA17F7D006548E7 /* ChordShop */ = {
 			isa = PBXGroup;
 			children = (
+				DB295E302AB95B7100FE03E1 /* Models */,
+				DBA344D42AB7918B00EB3627 /* Controllers */,
 				DBF6DFDE2AA17F7E006548E7 /* Preview Content */,
 				DB27F8ED2AAAD3A5004D8EE1 /* GoogleService-Info.plist */,
 				DB8E3F892AB5053B005AFDE1 /* Utils */,
@@ -137,14 +171,16 @@
 		DBF6DFE62AA1882C006548E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB6005FE2AB93EE300D4236A /* HomePage */,
 				DB8E3F922AB54C5F005AFDE1 /* ForgetPassword */,
 				DBA229902AA1B48D00D69575 /* SignUp */,
-				DBF6DFF62AA19688006548E7 /* Login */,
+				DBF6DFF62AA19688006548E7 /* SignIn */,
 				DBF6DFF12AA18EAC006548E7 /* Components */,
 				DBF6DFEE2AA18D0D006548E7 /* ViewHelpers */,
 				DBA2298E2AA1B28D00D69575 /* SignUpView.swift */,
 				DBF6DFDA2AA17F7D006548E7 /* ContentView.swift */,
 				DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */,
+				DB6005FC2AB93A9200D4236A /* HomePageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,12 +203,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		DBF6DFF62AA19688006548E7 /* Login */ = {
+		DBF6DFF62AA19688006548E7 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
 				DBF6DFF72AA196B3006548E7 /* EmailLoginView.swift */,
 			);
-			path = Login;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,17 +296,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB8E3F8D2AB5142D005AFDE1 /* AuthController.swift in Sources */,
+				DB295E3A2AB9610300FE03E1 /* Session.swift in Sources */,
 				DBA229962AA1B6BE00D69575 /* SafariView.swift in Sources */,
 				DBF6DFDB2AA17F7D006548E7 /* ContentView.swift in Sources */,
 				DBA229982AA1BA1800D69575 /* CheckboxView.swift in Sources */,
 				DB8E3F912AB54B13005AFDE1 /* ForgetPasswordView.swift in Sources */,
 				DB8E3F8B2AB50578005AFDE1 /* Validators.swift in Sources */,
+				DB295E382AB960F500FE03E1 /* SessionController.swift in Sources */,
 				DBF6DFF52AA18F32006548E7 /* GradientButtonView.swift in Sources */,
 				DBA2298F2AA1B28D00D69575 /* SignUpView.swift in Sources */,
 				DBF6DFD92AA17F7D006548E7 /* ChordShopApp.swift in Sources */,
+				DB295E2D2AB9551900FE03E1 /* ProspectView.swift in Sources */,
 				DBF6DFF02AA18D2F006548E7 /* GradientTextFieldBackground.swift in Sources */,
 				DB8E3F942AB54C8C005AFDE1 /* ForgetPasswordFormView.swift in Sources */,
 				DBF6DFF82AA196B3006548E7 /* EmailLoginView.swift in Sources */,
+				DB6005FD2AB93A9200D4236A /* HomePageView.swift in Sources */,
 				DBA229922AA1B49E00D69575 /* EmailSignUpFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

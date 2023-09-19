@@ -10,8 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            Divider()
-            
             VStack {
                 EmailLoginView()
                 Spacer()
@@ -22,7 +20,7 @@ struct ContentView: View {
                         SignUpView()
                     }
                 }
-                .font(.system(size: 12))
+                .font(.system(size: 14))
             }
             .padding()
             .navigationTitle("login_title_label")

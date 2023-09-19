@@ -19,9 +19,7 @@ struct SignUpView: View {
     var socialMedia: Int?
     
     var body: some View {
-        NavigationStack {
-            Divider()
-            
+        NavigationStack {            
             VStack {
                 EmailSignUpFormView()
                 Spacer()
