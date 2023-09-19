@@ -83,7 +83,7 @@ struct EmailSignUpFormView: View {
         .alert("error", isPresented: $invalidFieldPresent) {
             Button("close", role: .cancel) {}
         } message: {
-            Text("invalid_email")
+            Text("email_invalid")
         }
         // User SignUp
         .alert("user_created", isPresented: $successPresent) {
