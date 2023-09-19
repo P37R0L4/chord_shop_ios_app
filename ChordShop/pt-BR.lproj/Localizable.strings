@@ -36,4 +36,13 @@
 "email_alert_recuperation_message" = "Será enviado um email com as instruções de recuperação.";
 "may_you_continue" = "Deseja continuar?";
 "invalid_email" = "Formato de email inválido";
-"login_error_message" = "Erro ao logar! Verifique seu email/senha.";
+"login_error_message" = "Verifique seu email/senha.";
+"email_not_recognized" = "Endereço de email não reconhecido.";
+"email_not_verified_error" = "Email não verificado";
+"email_not_verified_message" = "Sua conta não foi ativada. Nós mandamos um link para o email cadastrado.";
+
+// MARK: Home string
+"home_title_label" = "Bem vindo!";
+"home" = "Início";
+"chat" = "Chat";
+"settings" = "Configurações";

@@ -15,6 +15,8 @@ class AuthController {
     private let password: String?
     private let token: String?
     
+    private let db = Firestore.firestore()
+    
     init(email: String!, password: String? = nil, token: String? = nil) {
         self.email = email
         self.password = password
@@ -23,19 +25,18 @@ class AuthController {
     
     public func checkStudentKey (_ completion: @escaping () -> Void, isError: @escaping () -> Void) {
         guard let token = self.token else {return}
-        
-        let db = Firestore.firestore()
-        let docRef = db.collection("student_keys").document(token)
+        let docRef = self.db.collection("student_keys").document(token)
         
         docRef.getDocument { document, error in
             guard error == nil else {return}
             guard let document = document else {return}
             
-            if document.exists {
-                completion()
-            } else {
+            if !document.exists {
                 isError()
+                return
             }
+            
+            completion()
         }
     }
     
@@ -50,63 +51,73 @@ class AuthController {
             return
         }
         
-        let db = Firestore.firestore()
-        let docRef = db.collection("student_keys").document(token)
-        
         Auth.auth().createUser(withEmail: self.email, password: password) {result, error in
             guard error == nil else {return}
             
-            // If success update valid
-            docRef.updateData(["valid": true]) { error in
-                if let error = error {
-                    print("Error updating document: \(error)")
-                } else {
-                    completion()
-                }
+            self.updateUserDataFromDBStore(token: token) {
+                completion()
             }
-            
         }
     }
     
-    public func signIn (_ completion: @escaping () -> Void, isError: @escaping () -> Void) {
+    private func updateUserDataFromDBStore(token: String, completion: @escaping () -> Void) {
+        let docRef = self.db.collection("student_keys").document(token)
+        let user = Auth.auth().currentUser
+        
+        guard let uid = user?.uid else {return}
+        
+        docRef.updateData(["valid": true, "uid": uid]) { error in
+            if error != nil {
+                return
+            }
+            
+            completion()
+        }
+    }
+    
+    public func signIn (_ completion: @escaping () -> Void, isError: @escaping () -> Void, isVerifiedEmailError: @escaping () -> Void) {
         guard let email = self.email else {return}
         guard let password = self.password else {return}
         
         let isValidEmail = Validators().isValidEmail(self.email)
-        
         guard isValidEmail else {
             isError()
             return
         }
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
+            guard error == nil else {
                 isError()
-            } else {
-                completion()
-                print("Success login!")
+                return
             }
+            
+            if Auth.auth().currentUser?.isEmailVerified == false {
+                isVerifiedEmailError()
+                return
+            }
+                        
+            completion()
         }
     }
     
     public func sendEmailVerification (_ completion: @escaping () -> Void) {
         Auth.auth().currentUser?.sendEmailVerification { error in
-            if let error = error {
-                print("Error on send email, with error \(String(describing: error))")
-            } else {
-                completion()
+            if error != nil {
+                return
             }
+            
+            completion()
         }
     }
     
-    public func recoverEmail (_ completion: @escaping () -> Void) {
+    public func recoverEmail (_ completion: @escaping () -> Void, isError: @escaping () -> Void?) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
-            if let error = error {
-                print("Error on recover email, with error \(String(describing: error))")
-            } else {
-                completion()
+            if error != nil {
+                isError()
+                return
             }
+            
+            completion()
         }
     }
 }

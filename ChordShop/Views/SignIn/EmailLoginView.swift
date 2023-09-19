@@ -11,9 +11,13 @@ struct EmailLoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var pushToHome: Bool = false
     
     // Alert states
     @State private var loginErrorPresent: Bool = false
+    @State private var emailVerifiedErrorPresent: Bool = false
+    
+    let validators = Validators()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -36,17 +40,28 @@ struct EmailLoginView: View {
                 let authController = AuthController(email: email, password: password)
                 
                 authController.signIn {
-                    
+                    pushToHome = true
                 } isError: {
                     loginErrorPresent = true
+                } isVerifiedEmailError: {
+                    emailVerifiedErrorPresent = true
                 }
-
-            }, title: "button_label")
+                
+            }, title: "button_label", isDisabled: validators.isDisabled(email: email, password: password))
+            
+            // MARK: Navigations Widgets
+            NavigationLink(destination: HomePageView(), isActive: $pushToHome) { EmptyView() }
+            
         }
         .alert("error", isPresented: $loginErrorPresent) {
             Button("close", role: .cancel) {}
         } message: {
             Text("login_error_message")
+        }
+        .alert("email_not_verified_error", isPresented: $emailVerifiedErrorPresent) {
+            Button("close", role: .cancel) {}
+        } message: {
+            Text("email_not_verified_message")
         }
     }
 }

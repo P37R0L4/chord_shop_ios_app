@@ -68,10 +68,10 @@ struct EmailSignUpFormView: View {
                 }
                 
             }, title: "sign_up", isDisabled: validators.isDisabled(
-                token: token,
                 email: email,
                 password: password,
-                checked: checked))
+                checked: checked,
+                token: token))
         }
         // Invalid key
         .alert("alert", isPresented: $warningPresent) {

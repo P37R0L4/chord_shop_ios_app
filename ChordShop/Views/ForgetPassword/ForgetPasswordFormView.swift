@@ -11,6 +11,7 @@ struct ForgetPasswordFormView: View {
     
     @State var email: String = ""
     @State var alertRecoverPresent: Bool = false
+    @State var emailNotRecognized: Bool = false
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -37,6 +38,11 @@ struct ForgetPasswordFormView: View {
         } message: {
             Text("email_alert_recuperation_message")
         }
+        .alert("alert", isPresented: $emailNotRecognized) {
+            Button("return_to_login", role: .cancel) {}
+        } message: {
+            Text("email_not_recognized")
+        }
     }
     
     func SendRecoverEmail () {
@@ -44,6 +50,8 @@ struct ForgetPasswordFormView: View {
         
         authController.recoverEmail{
             alertRecoverPresent = true
+        } isError: {
+            emailNotRecognized = true
         }
     }
 }

@@ -36,4 +36,14 @@
 "email_alert_recuperation_message" = "Will be sended a email with recovery instructions.";
 "may_you_continue" = "may you continue?";
 "invalid_email" = "Invalid email format";
-"login_error_message" = "Login error! Verify your email/password.";
+"login_error_message" = "Verify your email/password.";
+"email_not_recognized" = "Email address not recognized.";
+"email_not_verified_error" = "Email is not verified";
+"email_not_verified_message" = "You have not activate your account yet. We sent a email with the link to activate";
+
+// MARK: Home string
+"home_title_label" = "Welcome";
+"home" = "Home";
+"chat" = "Chat";
+"settings" = "settings";
+

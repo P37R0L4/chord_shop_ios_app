@@ -10,8 +10,6 @@ import SwiftUI
 struct ForgetPasswordView: View {
     var body: some View {
         NavigationStack {
-            Divider()
-            
             VStack {
                 ForgetPasswordFormView()
                 Spacer()
