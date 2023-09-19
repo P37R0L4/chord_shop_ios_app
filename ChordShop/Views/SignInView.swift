@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignInView: View {
     
     @State private var pushToHome: Bool = false
     
@@ -41,16 +41,16 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         // MARK: Languages Preview
-        ContentView()
+        SignInView()
             .environment(\.locale, .init(identifier: "pt"))
         
-        ContentView()
+        SignInView()
             .environment(\.locale, .init(identifier: "en"))
         
         // MARK: Dark preview
-        ContentView().preferredColorScheme(.dark)
+        SignInView().preferredColorScheme(.dark)
     }
 }

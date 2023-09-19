@@ -25,7 +25,7 @@
 		DBA229962AA1B6BE00D69575 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA229952AA1B6BE00D69575 /* SafariView.swift */; };
 		DBA229982AA1BA1800D69575 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA229972AA1BA1800D69575 /* CheckboxView.swift */; };
 		DBF6DFD92AA17F7D006548E7 /* ChordShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFD82AA17F7D006548E7 /* ChordShopApp.swift */; };
-		DBF6DFDB2AA17F7D006548E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFDA2AA17F7D006548E7 /* ContentView.swift */; };
+		DBF6DFDB2AA17F7D006548E7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6DFDA2AA17F7D006548E7 /* SignInView.swift */; };
 		DBF6DFDD2AA17F7E006548E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DFDC2AA17F7E006548E7 /* Assets.xcassets */; };
 		DBF6DFE02AA17F7E006548E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DFDF2AA17F7E006548E7 /* Preview Assets.xcassets */; };
 		DBF6DFEA2AA18956006548E7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DFEC2AA18956006548E7 /* Localizable.strings */; };
@@ -49,7 +49,7 @@
 		DBA229972AA1BA1800D69575 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		DBF6DFD52AA17F7D006548E7 /* ChordShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF6DFD82AA17F7D006548E7 /* ChordShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordShopApp.swift; sourceTree = "<group>"; };
-		DBF6DFDA2AA17F7D006548E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBF6DFDA2AA17F7D006548E7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DBF6DFDC2AA17F7E006548E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF6DFDF2AA17F7E006548E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBF6DFEB2AA18956006548E7 /* pt-BR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				DBF6DFF12AA18EAC006548E7 /* Components */,
 				DBF6DFEE2AA18D0D006548E7 /* ViewHelpers */,
 				DBA2298E2AA1B28D00D69575 /* SignUpView.swift */,
-				DBF6DFDA2AA17F7D006548E7 /* ContentView.swift */,
+				DBF6DFDA2AA17F7D006548E7 /* SignInView.swift */,
 				DB8E3F902AB54B13005AFDE1 /* ForgetPasswordView.swift */,
 				DB6005FC2AB93A9200D4236A /* HomePageView.swift */,
 			);
@@ -293,7 +293,7 @@
 			files = (
 				DB8E3F8D2AB5142D005AFDE1 /* AuthController.swift in Sources */,
 				DBA229962AA1B6BE00D69575 /* SafariView.swift in Sources */,
-				DBF6DFDB2AA17F7D006548E7 /* ContentView.swift in Sources */,
+				DBF6DFDB2AA17F7D006548E7 /* SignInView.swift in Sources */,
 				DBA229982AA1BA1800D69575 /* CheckboxView.swift in Sources */,
 				DB8E3F912AB54B13005AFDE1 /* ForgetPasswordView.swift in Sources */,
 				DB8E3F8B2AB50578005AFDE1 /* Validators.swift in Sources */,

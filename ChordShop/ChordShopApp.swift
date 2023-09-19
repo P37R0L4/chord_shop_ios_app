@@ -25,7 +25,7 @@ struct ChordShopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignInView()
         }
     }
 }
